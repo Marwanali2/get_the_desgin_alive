@@ -4,7 +4,7 @@ import '../utils/styles.dart';
 
 class PetContainer extends StatelessWidget {
   final int index;
-  const PetContainer({super.key, required this.index});
+  const   PetContainer({super.key, required this.index});
 
 
 

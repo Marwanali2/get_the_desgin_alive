@@ -21,10 +21,13 @@ class SearchBox extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
         ),
         child: TextFormField(
-          controller: txtQuery,
           // onChanged: search,
           style: TextStyles.textStyle22,
           cursorColor: Colors.black,
+
+          // onChanged: searchMethod,
+          // onFieldSubmitted: searchMethod,
+          // onSaved: (newValue) => searchMethod,
           decoration: InputDecoration(
             hintText: "Search by pet type",
             hintStyle: TextStyles.textStyle22
@@ -43,17 +46,21 @@ class SearchBox extends StatelessWidget {
                 20.0,
               ),
             ),
+
             prefixIcon: Transform.rotate(
               angle: 3.14 / 2,
               child: Padding(
                 padding: const EdgeInsets.only(left: 30, right: 30),
                 child: IconButton(
-                  onPressed: () {},
                   icon: const Icon(
                     Icons.search,
                     size: 30,
                     color: ColorStyles.kOrangeColor,
                   ),
+
+                  onPressed: () {
+
+                  },
                 ),
               ),
             ),
@@ -63,6 +70,23 @@ class SearchBox extends StatelessWidget {
     );
   }
 
-  void searchMethod() {}
+  // void searchMethod(String query) {
+  //   query=query.toLowerCase();
+  //   if (kDebugMode) {
+  //     print('//////////////=$query');
+  //   }
+  //   enteredText=query;
+  //   petList.forEach((pet) {
+  //     if(enteredText==pet.petType){
+  //       if (kDebugMode) {
+  //         print('************=$enteredText');
+  //       }
+  //     }
+  //     else{
+  //       print('*****************');
+  //     }
+  //   });
+  //
+  // }
 }
 
