@@ -63,7 +63,6 @@ flutter:
   assets:
     - assets/images/
     - assets/svg/heart.svg
-    - assets/svg/search.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
