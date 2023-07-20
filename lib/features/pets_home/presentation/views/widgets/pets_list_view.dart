@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
 import '../../../../../core/widgets/pet_container.dart';
+import '../../../../../pet_dummy_data.dart';
 class PetsListView extends StatelessWidget {
   const PetsListView({
     super.key,
@@ -19,9 +20,9 @@ class PetsListView extends StatelessWidget {
             .height * 0.74,
         color: ColorStyles.kGreyColor,
         child: ListView.builder(
-          itemCount: 20, physics: const BouncingScrollPhysics(),
+          itemCount: petList.length, physics: const BouncingScrollPhysics(),
           itemBuilder:(context, index) {
-            return const PetContainer();
+            return PetContainer(index: index,);
           },
 
         ),

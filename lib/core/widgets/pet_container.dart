@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import '../../pet_dummy_data.dart';
 import '../utils/styles.dart';
 
 class PetContainer extends StatelessWidget {
-  const PetContainer({Key? key}) : super(key: key);
+  final int index;
+  const PetContainer({super.key, required this.index});
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -22,24 +26,22 @@ class PetContainer extends StatelessWidget {
               child: SizedBox(
                 width: 115,
                 height: 150,
-                child: Image.network(
-                  'https://th.bing.com/th/id/OIP.UQgS8EKXvOfpZ0pXXVBeYQHaIh?pid=ImgDet&rs=1',
-                ),
+                child: Image.asset(petList[index].photoAsset),
               ),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 12, 12, 13),
               child: Column(
-               // mainAxisAlignment: MainAxisAlignment.start,
+
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Golden',
+                   Text(
+                     petList[index].type,
                     style: TextStyles.textStyle22,
                   ),
                   const Spacer(),
                   Text(
-                    'Dog',
+                    petList[index].animal,
                     style: TextStyles.textStyle15
                         .copyWith(color: ColorStyles.kGreyBoldColor),
                   ),
@@ -53,7 +55,7 @@ class PetContainer extends StatelessWidget {
                       ),
                       const SizedBox(width: 8),
                       Text(
-                        'Pet Love: 20',
+                        'Pet Love: ${ petList[index].age}',
                         style: TextStyles.textStyle15
                             .copyWith(color: ColorStyles.kOrangeColor),
                       ),
