@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Pet {
-  final String animal;
-  final String type;
-  final num age;
-  final String photoDrive;
-  final String photoAsset;
+  final String petCategory;
+  final String petType;
+  final num petLoveCount;
+  final String petPic;
+  final String petPhotoAsset;
 
-  Pet(this.animal, this.type, this.age, this.photoDrive, this.photoAsset);
+  Pet(this.petCategory, this.petType, this.petLoveCount, this.petPic, this.petPhotoAsset);
+
 
 
 }

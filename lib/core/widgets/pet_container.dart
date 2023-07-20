@@ -26,7 +26,7 @@ class PetContainer extends StatelessWidget {
               child: SizedBox(
                 width: 115,
                 height: 150,
-                child: Image.asset(petList[index].photoAsset),
+                child: Image.asset(petList[index].petPhotoAsset),
               ),
             ),
             Padding(
@@ -36,12 +36,12 @@ class PetContainer extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                    Text(
-                     petList[index].type,
+                     petList[index].petType,
                     style: TextStyles.textStyle22,
                   ),
                   const Spacer(),
                   Text(
-                    petList[index].animal,
+                    petList[index].petCategory,
                     style: TextStyles.textStyle15
                         .copyWith(color: ColorStyles.kGreyBoldColor),
                   ),
@@ -55,7 +55,7 @@ class PetContainer extends StatelessWidget {
                       ),
                       const SizedBox(width: 8),
                       Text(
-                        'Pet Love: ${ petList[index].age}',
+                        'Pet Love: ${ petList[index].petLoveCount}',
                         style: TextStyles.textStyle15
                             .copyWith(color: ColorStyles.kOrangeColor),
                       ),

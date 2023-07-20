@@ -11,12 +11,14 @@ class PetsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        HomeBar(),
-        SearchBox(),
-        PetsListView(),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          HomeBar(),
+          SearchBox(),
+          PetsListView(),
+        ],
+      ),
     );
   }
 }
